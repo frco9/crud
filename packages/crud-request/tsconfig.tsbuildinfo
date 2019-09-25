@@ -129,6 +129,14 @@
         "version": "5c771dbfab3a478efd78f456aa5fb48b90d562f5a7fca1501565b19a4c41b122",
         "signature": "5c771dbfab3a478efd78f456aa5fb48b90d562f5a7fca1501565b19a4c41b122"
       },
+      "./src/exceptions/request-query.exception.ts": {
+        "version": "92ca875160041cba4085391ed34e13bd2f03f59fe07e853e3e85ab8d6e0ca14f",
+        "signature": "15064948710d921d7a28bf8c6714f7dc56ebf093ec721a9e4ad9b3aed605cdcc"
+      },
+      "./src/exceptions/index.ts": {
+        "version": "b6fcb27b4793d97d39247173a929e407bc3a3dd0dfa54bb98f2abb9e7fde9974",
+        "signature": "b6fcb27b4793d97d39247173a929e407bc3a3dd0dfa54bb98f2abb9e7fde9974"
+      },
       "../util/src/checks.util.ts": {
         "version": "d53d29f2fde138448b2d14408068e4a3c90c55a47bd1e6d47028aa17cbdb1c0e",
         "signature": "d53d29f2fde138448b2d14408068e4a3c90c55a47bd1e6d47028aa17cbdb1c0e"
@@ -173,14 +181,6 @@
         "version": "01b14b7e33171c8e8a3718ff003e831aa5008432b23c943e5e10728d95a99cb2",
         "signature": "01b14b7e33171c8e8a3718ff003e831aa5008432b23c943e5e10728d95a99cb2"
       },
-      "./src/exceptions/request-query.exception.ts": {
-        "version": "92ca875160041cba4085391ed34e13bd2f03f59fe07e853e3e85ab8d6e0ca14f",
-        "signature": "15064948710d921d7a28bf8c6714f7dc56ebf093ec721a9e4ad9b3aed605cdcc"
-      },
-      "./src/exceptions/index.ts": {
-        "version": "b6fcb27b4793d97d39247173a929e407bc3a3dd0dfa54bb98f2abb9e7fde9974",
-        "signature": "b6fcb27b4793d97d39247173a929e407bc3a3dd0dfa54bb98f2abb9e7fde9974"
-      },
       "./src/request-query.validator.ts": {
         "version": "1972aac455853aecdb115f0f966638bc848a846f7d4c7d9681667f01105887da",
         "signature": "ec3cd67a9376a4688cf084af0a935cc18776b0f24a1e0db762f0ebb962dc3237"
@@ -194,8 +194,8 @@
         "signature": "83cea5f74dde58a3c9206f38a40448239f462d44ff2ca05a91dbd77434bb9062"
       },
       "./src/index.ts": {
-        "version": "91ee2874ec7b7efa4812eff8f9c46b2a0e409df60fa9624115d64efa915685d2",
-        "signature": "91ee2874ec7b7efa4812eff8f9c46b2a0e409df60fa9624115d64efa915685d2"
+        "version": "5df4f11ff2f7d27bbe054ae21c08b8ae7c7aee84999b1182cfc18c1bd76e9c43",
+        "signature": "5df4f11ff2f7d27bbe054ae21c08b8ae7c7aee84999b1182cfc18c1bd76e9c43"
       },
       "../../node_modules/@babel/types/lib/index.d.ts": {
         "version": "9eac0dd4de5669db2b8321dffa400b997f7b21181118efc7a2c1743d93d4be57",
@@ -648,6 +648,15 @@
         "../../node_modules/@types/node/util.d.ts",
         "../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "./src/exceptions/request-query.exception.ts": [
+        "../../node_modules/@types/node/util.d.ts",
+        "../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "./src/exceptions/index.ts": [
+        "./src/exceptions/request-query.exception.ts",
+        "../../node_modules/@types/node/util.d.ts",
+        "../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../util/src/checks.util.ts": [
         "../../node_modules/@types/node/util.d.ts",
         "../../node_modules/@types/node/ts3.2/util.d.ts"
@@ -703,15 +712,6 @@
         "../../node_modules/@types/node/util.d.ts",
         "../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "./src/exceptions/request-query.exception.ts": [
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "./src/exceptions/index.ts": [
-        "./src/exceptions/request-query.exception.ts",
-        "../../node_modules/@types/node/util.d.ts",
-        "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "./src/request-query.validator.ts": [
         "../util/lib/index.d.ts",
         "./src/exceptions/index.ts",
@@ -739,6 +739,7 @@
         "../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "./src/index.ts": [
+        "./src/exceptions/index.ts",
         "./src/request-query.builder.ts",
         "./src/request-query.parser.ts",
         "./src/interfaces/index.ts",
@@ -1268,6 +1269,28 @@
         "../../node_modules/@types/node/util.d.ts",
         "../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "./src/exceptions/index.ts": [
+        "./src/exceptions/request-query.exception.ts"
+      ],
+      "./src/index.ts": [
+        "./src/exceptions/index.ts",
+        "./src/request-query.builder.ts",
+        "./src/request-query.parser.ts",
+        "./src/interfaces/index.ts",
+        "./src/types/index.ts"
+      ],
+      "./src/request-query.parser.ts": [
+        "./src/types/index.ts",
+        "./src/interfaces/index.ts"
+      ],
+      "./src/request-query.validator.ts": [
+        "./src/types/index.ts",
+        "./src/interfaces/index.ts"
+      ],
+      "./src/request-query.builder.ts": [
+        "./src/interfaces/index.ts",
+        "./src/types/index.ts"
+      ],
       "../util/src/checks.util.ts": [
         "../../node_modules/@types/node/util.d.ts",
         "../../node_modules/@types/node/ts3.2/util.d.ts"
@@ -1277,24 +1300,6 @@
         "../util/lib/obj.util.d.ts",
         "../../node_modules/@types/node/util.d.ts",
         "../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "./src/request-query.parser.ts": [
-        "./src/types/index.ts",
-        "./src/interfaces/index.ts"
-      ],
-      "./src/index.ts": [
-        "./src/request-query.builder.ts",
-        "./src/request-query.parser.ts",
-        "./src/interfaces/index.ts",
-        "./src/types/index.ts"
-      ],
-      "./src/request-query.builder.ts": [
-        "./src/interfaces/index.ts",
-        "./src/types/index.ts"
-      ],
-      "./src/request-query.validator.ts": [
-        "./src/types/index.ts",
-        "./src/interfaces/index.ts"
       ],
       "../util/src/obj.util.ts": [
         "../../node_modules/@types/node/util.d.ts",
@@ -1318,9 +1323,6 @@
       ],
       "./src/interfaces/params-options.interface.ts": [
         "./src/types/index.ts"
-      ],
-      "./src/exceptions/index.ts": [
-        "./src/exceptions/request-query.exception.ts"
       ],
       "../../node_modules/@babel/types/lib/index.d.ts": [
         "../../node_modules/@types/node/util.d.ts",
@@ -1716,6 +1718,8 @@
       ]
     },
     "semanticDiagnosticsPerFile": [
+      "./src/exceptions/request-query.exception.ts",
+      "./src/exceptions/index.ts",
       "../util/src/checks.util.ts",
       "../util/src/obj.util.ts",
       "../util/src/index.ts",
@@ -1727,8 +1731,6 @@
       "./src/interfaces/parsed-request.interface.ts",
       "./src/interfaces/create-query-params.interface.ts",
       "./src/interfaces/index.ts",
-      "./src/exceptions/request-query.exception.ts",
-      "./src/exceptions/index.ts",
       "./src/request-query.validator.ts",
       "./src/request-query.builder.ts",
       "./src/request-query.parser.ts",
