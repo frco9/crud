@@ -519,15 +519,20 @@ export class TypeOrmCrudService<T> extends CrudService<T> {
           : cond.select.filter((col) => allowed.some((a) => a === col));
 
       const select = [
-        relation.referencedColumn,
         ...(options.persist && options.persist.length ? options.persist : []),
         ...columns,
-      ].map((col) => `${relation.name}.${col}`);
+      ];
+
+      // When there is not any allowed columns,
+      // we add the referencedColumn to the select
+      if (columns.length === 0) {
+        select.push(relation.referencedColumn);
+      }
 
       const relationPath = relation.nestedRelation || `${this.alias}.${relation.name}`;
 
       builder[relation.type](relationPath, relation.name);
-      builder.addSelect(select);
+      builder.addSelect(select.map((col) => `${relation.name}.${col}`));
     }
 
     return true;

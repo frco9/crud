@@ -254,6 +254,7 @@ describe('#crud-typeorm', () => {
           profile: {
             name: 'testName',
           },
+          userProjects: [],
         };
         return request(server)
           .post('/companies/1/users')
