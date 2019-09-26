@@ -1,5 +1,5 @@
 {
-  "name": "@nestjsx/crud-typeorm",
+  "name": "crud-typeorm",
   "description": "NestJs CRUD for RESTful APIs - TypeORM",
   "version": "4.2.3",
   "license": "MIT",
