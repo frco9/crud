@@ -11,9 +11,9 @@
   "files": [
     "lib"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/nestjsx/crud.git"
+  "repository" : {
+    "type" : "git",
+    "url": "ssh://git@github.com:frco9/crud.git"
   },
   "bugs": {
     "url": "https://github.com/nestjsx/crud/issues"
